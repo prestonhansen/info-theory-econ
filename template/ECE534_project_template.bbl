@@ -32,6 +32,13 @@ K.~P. Burnham, D.~R. Anderson, and K.~P. Huyvaert, ``Aic model selection and
   \url{https://doi.org/10.1007/s00265-010-1029-6}
 \BIBentrySTDinterwordspacing
 
+\bibitem{universal}
+\BIBentryALTinterwordspacing
+T.~M. Cover, ``Universal portfolios,'' \emph{Mathematical Finance}, vol.~1,
+  no.~1, pp. 1--29, 1991. [Online]. Available:
+  \url{http://dx.doi.org/10.1111/j.1467-9965.1991.tb00002.x}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Hansen2010}
 \BIBentryALTinterwordspacing
 L.~P. Hansen and T.~J. Sargent, ``Chapter 20 - wanting robustness in
@@ -77,6 +84,14 @@ M.~H. Pesaran and A.~Timmermann, ``Predictability of stock returns: Robustness
   and economic significance,'' \emph{The Journal of Finance}, vol.~50, no.~4,
   pp. 1201--1228, 1995. [Online]. Available:
   \url{http://www.jstor.org/stable/2329349}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Rivoire2011}
+\BIBentryALTinterwordspacing
+O.~Rivoire and S.~Leibler, ``The value of information for populations in
+  varying environments,'' \emph{Journal of Statistical Physics}, vol. 142,
+  no.~6, pp. 1124--1166, Apr 2011. [Online]. Available:
+  \url{https://doi.org/10.1007/s10955-011-0166-2}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Sims2003}

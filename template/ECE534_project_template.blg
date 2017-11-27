@@ -15,45 +15,45 @@ Database file #1: refs.bib
 Warning--empty booktitle in Hansen2010
 
 Done.
-You've used 11 entries,
+You've used 13 entries,
             4413 wiz_defined-function locations,
-            1105 strings with 13087 characters,
-and the built_in function-call counts, 11983 in all, are:
-= -- 1116
-> -- 250
-< -- 118
-+ -- 141
-- -- 46
-* -- 646
-:= -- 1886
-add.period$ -- 24
-call.type$ -- 11
-change.case$ -- 60
-chr.to.int$ -- 261
-cite$ -- 12
-duplicate$ -- 737
-empty$ -- 796
-format.name$ -- 56
-if$ -- 2697
+            1122 strings with 13449 characters,
+and the built_in function-call counts, 13967 in all, are:
+= -- 1310
+> -- 286
+< -- 139
++ -- 162
+- -- 52
+* -- 751
+:= -- 2210
+add.period$ -- 28
+call.type$ -- 13
+change.case$ -- 69
+chr.to.int$ -- 306
+cite$ -- 14
+duplicate$ -- 860
+empty$ -- 922
+format.name$ -- 63
+if$ -- 3138
 int.to.chr$ -- 0
-int.to.str$ -- 11
-missing$ -- 109
-newline$ -- 71
-num.names$ -- 26
-pop$ -- 203
+int.to.str$ -- 13
+missing$ -- 126
+newline$ -- 81
+num.names$ -- 30
+pop$ -- 229
 preamble$ -- 1
-purify$ -- 43
+purify$ -- 50
 quote$ -- 2
-skip$ -- 927
+skip$ -- 1082
 stack$ -- 0
-substring$ -- 681
-swap$ -- 674
-text.length$ -- 31
+substring$ -- 798
+swap$ -- 788
+text.length$ -- 37
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 99
+type$ -- 117
 warning$ -- 1
-while$ -- 58
-width$ -- 13
-write$ -- 170
+while$ -- 70
+width$ -- 15
+write$ -- 198
 (There was 1 warning)
