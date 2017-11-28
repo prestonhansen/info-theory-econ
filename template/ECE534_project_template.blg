@@ -12,48 +12,46 @@ Database file #1: refs.bib
 -- http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 ** Sorting version - not for use with work to be submitted to the IEEE.
-Warning--empty booktitle in Hansen2010
 
 Done.
-You've used 13 entries,
+You've used 10 entries,
             4413 wiz_defined-function locations,
-            1122 strings with 13449 characters,
-and the built_in function-call counts, 13967 in all, are:
-= -- 1310
-> -- 286
-< -- 139
-+ -- 162
-- -- 52
-* -- 751
-:= -- 2210
-add.period$ -- 28
-call.type$ -- 13
-change.case$ -- 69
-chr.to.int$ -- 306
-cite$ -- 14
-duplicate$ -- 860
-empty$ -- 922
-format.name$ -- 63
-if$ -- 3138
+            1099 strings with 12661 characters,
+and the built_in function-call counts, 9490 in all, are:
+= -- 890
+> -- 212
+< -- 79
++ -- 113
+- -- 45
+* -- 524
+:= -- 1585
+add.period$ -- 21
+call.type$ -- 10
+change.case$ -- 53
+chr.to.int$ -- 162
+cite$ -- 10
+duplicate$ -- 589
+empty$ -- 629
+format.name$ -- 53
+if$ -- 2088
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 126
-newline$ -- 81
-num.names$ -- 30
-pop$ -- 229
+int.to.str$ -- 10
+missing$ -- 95
+newline$ -- 70
+num.names$ -- 24
+pop$ -- 180
 preamble$ -- 1
-purify$ -- 50
+purify$ -- 40
 quote$ -- 2
-skip$ -- 1082
+skip$ -- 722
 stack$ -- 0
-substring$ -- 798
-swap$ -- 788
-text.length$ -- 37
+substring$ -- 436
+swap$ -- 516
+text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 117
-warning$ -- 1
-while$ -- 70
-width$ -- 15
-write$ -- 198
-(There was 1 warning)
+type$ -- 84
+warning$ -- 0
+while$ -- 48
+width$ -- 12
+write$ -- 156

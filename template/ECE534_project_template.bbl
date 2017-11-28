@@ -18,18 +18,20 @@
 \fi
 #2}}
 
-\bibitem{Cover1988}
-A.~R. Barron and T.~M. Cover, ``A bound on the financial value of
-  information,'' \emph{IEEE Transactions on Information Theory}, vol.~34,
-  no.~5, pp. 1097--1100, Sep 1988.
-
-\bibitem{Burnham2011}
+\bibitem{Akaike1998}
 \BIBentryALTinterwordspacing
-K.~P. Burnham, D.~R. Anderson, and K.~P. Huyvaert, ``Aic model selection and
-  multimodel inference in behavioral ecology: some background, observations,
-  and comparisons,'' \emph{Behavioral Ecology and Sociobiology}, vol.~65,
-  no.~1, pp. 23--35, Jan 2011. [Online]. Available:
-  \url{https://doi.org/10.1007/s00265-010-1029-6}
+H.~Akaike, \emph{Information Theory and an Extension of the Maximum Likelihood
+  Principle}, E.~Parzen, K.~Tanabe, and G.~Kitagawa, Eds.\hskip 1em plus 0.5em
+  minus 0.4em\relax New York, NY: Springer New York, 1998. [Online]. Available:
+  \url{https://doi.org/10.1007/978-1-4612-1694-0_15}
+\BIBentrySTDinterwordspacing
+
+\bibitem{sargent2015}
+\BIBentryALTinterwordspacing
+M.~Cagetti, L.~P. Hansen, T.~Sargent, and N.~Williams, ``Robustness and pricing
+  with uncertain growth,'' \emph{The Review of Financial Studies}, vol.~15,
+  no.~2, pp. 363--404, 2002. [Online]. Available: \url{+
+  http://dx.doi.org/10.1093/rfs/15.2.363}
 \BIBentrySTDinterwordspacing
 
 \bibitem{universal}
@@ -39,22 +41,12 @@ T.~M. Cover, ``Universal portfolios,'' \emph{Mathematical Finance}, vol.~1,
   \url{http://dx.doi.org/10.1111/j.1467-9965.1991.tb00002.x}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Hansen2010}
+\bibitem{robustPortfolio}
 \BIBentryALTinterwordspacing
-L.~P. Hansen and T.~J. Sargent, ``Chapter 20 - wanting robustness in
-  macroeconomics,'' ser. Handbook of Monetary Economics, B.~M. Friedman and
-  M.~Woodford, Eds.\hskip 1em plus 0.5em minus 0.4em\relax Elsevier, 2010,
-  vol.~3, no. Supplement C, pp. 1097 -- 1157. [Online]. Available:
-  \url{http://www.sciencedirect.com/science/article/pii/B9780444534545000086}
-\BIBentrySTDinterwordspacing
-
-\bibitem{StochasticGames}
-\BIBentryALTinterwordspacing
-A.~Ja\'skiewicz and A.~Nowak, ``Stochastic games with unbounded payoffs:
-  Applications to robust control in economics,'' \emph{Dynamic Games and
-  Applications}, vol.~1, no.~2, pp. 253--279, 2011, cited By 11. [Online].
-  Available:
-  \url{https://www.scopus.com/inward/record.uri?eid=2-s2.0-84867967400}
+L.~Garlappi, R.~Uppal, and T.~Wang, ``Portfolio selection with parameter and
+  model uncertainty: A multi-prior approach,'' \emph{The Review of Financial
+  Studies}, vol.~20, no.~1, pp. 41--81, 2007. [Online]. Available: \url{+
+  http://dx.doi.org/10.1093/rfs/hhl003}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Li2017}
@@ -65,17 +57,11 @@ W.~Li, Y.~Luo, and J.~Nie, ``{Elastic attention, risk sharing, and
   \url{https://ideas.repec.org/a/eee/dyncon/v79y2017icp1-20.html}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Cover2005}
-C.~Mathis and T.~M. Cover, ``A statistic for measuring the influence of side
-  information in investment,'' in \emph{Proceedings. International Symposium on
-  Information Theory, 2005. ISIT 2005.}, Sept 2005, pp. 1156--1157.
-
-\bibitem{Cover1998}
+\bibitem{homeBias}
 \BIBentryALTinterwordspacing
-E.~Ordentlich and T.~M. Cover, ``The cost of achieving the best portfolio in
-  hindsight,'' \emph{Mathematics of Operations Research}, vol.~23, no.~4, pp.
-  960--982, 1998. [Online]. Available:
-  \url{https://doi.org/10.1287/moor.23.4.960}
+S.~V. Nieuwerburgh and L.~Veldkamp, ``Information immobility and the home bias
+  puzzle,'' National Bureau of Economic Research, Working Paper 13366,
+  September 2007. [Online]. Available: \url{http://www.nber.org/papers/w13366}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Pesaran1995}
@@ -101,24 +87,13 @@ C.~A. Sims, ``{Implications of rational inattention},'' \emph{Journal of
   Available: \url{https://ideas.repec.org/a/eee/moneco/v50y2003i3p665-690.html}
 \BIBentrySTDinterwordspacing
 
-\bibitem{RePEc:eee:monchp:3-04}
+\bibitem{Sims2010}
 \BIBentryALTinterwordspacing
 ------, ``{Rational Inattention and Monetary Economics},'' in \emph{{Handbook
   of Monetary Economics}}, ser. Handbook of Monetary Economics, B.~M. Friedman
   and M.~Woodford, Eds.\hskip 1em plus 0.5em minus 0.4em\relax Elsevier, 2010,
   vol.~3, ch.~4, pp. 155--181. [Online]. Available:
   \url{https://ideas.repec.org/h/eee/monchp/3-04.html}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Woodford2009}
-\BIBentryALTinterwordspacing
-M.~Woodford, ``Information-constrained state-dependent pricing,'' \emph{Journal
-  of Monetary Economics}, vol.~56, no. Supplement, pp. S100 -- S124, 2009,
-  supplement issue: December 12-13, 2008 Research Conference on 'Monetary
-  Policy under Imperfect Information' Sponsored by the Swiss National Bank
-  (http://www.snb.ch) and Study Center Gerzensee (www.szgerzensee.ch).
-  [Online]. Available:
-  \url{http://www.sciencedirect.com/science/article/pii/S0304393209000993}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

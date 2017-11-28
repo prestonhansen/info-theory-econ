@@ -1,6 +1,6 @@
 \documentclass[10pt, twocolumn]{IEEEtran}
 \usepackage{amsfonts, amsmath, amssymb, epsfig, graphicx}
-
+\usepackage[strings]{underscore}
 \newcommand{\n}{\noindent}
 \newcommand{\field}[1]{\mathbb{#1}}
 \newcommand{\D}[2]{\frac{\partial #2}{\partial #1}}
@@ -46,13 +46,44 @@ E-mail: phanse4@uic.edu}
 Big results in information theory applied to economics and investing. Hopefully a look at open problems.
 
 \section{Information Theory in Economics}
+Many traditional economic models utilize the concept of rational agents to develop various results.
+While it is analytically convenient to assume that every consumer has access to perfect information
+about innumerable state variables representing their environment, it is intuitive that such models
+are not great (and indeed are often terrible) approximations of human behavior.
 
-\subsection{Rational Inattention - Modeling behavior in the absence of perfect information}
-Discuss rational inattention (especially in the context of typical models of behavior in economics).
+It turns out that information theoretic concepts can help to better approximate two realities that
+we observe in economic decision making - limited information processing capacity, and distrust or
+lack of access to a perfect model of the environment.
 
-Also discuss results and newer papers.
+Sims \cite{Sims2003} \cite{Sims2010} aims to address the first point in his work on rational inattention.
+\subsection{Rational Inattention}
+In \cite{Sims2003}, rational inattention is developed for linear quadratic (LQ) control with multivariate
+state. The full setup for this case is lengthy, so for brevity the simpler optimization problem is given:
+\begin{gather*}
+  \min_{q}\left\{E\left[(Y-X)^{2}\right]\right\}
+\end{gather*}
+Given the mutual information constraint $I(X;Y) \le K$ where $X$
+is the environment and $Y$ is some related signal.
 
-\subsection{Rational Inattention and the Home Bias Puzzle}
+For another perspective, the problem can be reframed as such:
+An agent aims to make a decision $u \epsilon U$ based on some signal $y \epsilon Y$ with the constraint that
+$I(X;Y) \le K$. Assuming that $Y$ is beyond the control of the agent, the agent aims to optimize the cost of
+their decision $P_{U|Y}$, and their observation channel $P_{Y|X}$. For an arbitrary cost function we have
+\begin{gather*}
+  U^{*} = \min_{u}\left\{E\left[C(X, u)|Y\right]\right\}
+\end{gather*}
+and now an intuitive goal is to maximize the difference between this decision and the best decision possible
+without knowing $Y$:
+\begin{gather*}
+  P_{Y|X}^{*} = \max_{P_{Y|X} : I(X;Y) \le K}\left\{\min_{u}E\left[C(X, u)\right] - E\left[U^{*}\right]\right\}
+\end{gather*}
+
+From \cite{Sims2010}, development of this model has interesting implications. First, RI smooths responses
+and injects effective signal processing noise into responses to changes in the environment. This explains
+the observed phenomena of ``price stickiness'', which is the resistance/delay in reaction to a change in
+price of something.
+
+\subsection{Applications of Rational Inattention}
 The Home Bias Puzzle (in trade) is based around the fact that domestic trade is typically much higher than
 international trade. In \cite{homeBias}, it is argued that domestic and foreign investors start with asymmetric prior knowledge of
 home and abroad. Given a limited information processing capacity (an idea from rational inattention), and the assumption that specialization
@@ -61,21 +92,70 @@ investments and further increase the asymmetry of knowledge about domestic asset
 
 \cite{homeBias} defines the capacity constraint as
 \begin{gather*}
-  \Pi_{i} \Alpha_{i}^{\^} \ge \exp{-2K} \Pi_{i} \Alpha_{i}
+  \prod_{i} \widehat{\Lambda_{i}} \ge \exp(-2K) \prod_{i} \Lambda_{i}
 \end{gather*}
-For capacity limit K, where $\Alpha_{i}$ and $\Alpha_{i}^{\^}$ are the variance of a risk factor i, and so the difference
-$(\Alpha_{i} - \Alpha_{i}^{\^})$ is the reduction in variance in a risk factor i (i.e., learning about that risk factor).
+For capacity limit K, where $\Lambda_{i}$ and $\widehat{\Lambda_{i}}$ are the variance of a risk factor $i$, and so the difference
+$(\Lambda_{i} - \widehat{\Lambda_{i}})$ is the reduction in variance in a risk factor i (i.e., learning about that risk factor).
 
 It is then shown that given this constraint (and others), that home bias increases with information mobility.
 
+In a similar vein, \cite{Li2017} finds that rational inattention helps to explain the discrepancy between expected and
+observed correlation of consumption between consumptions. Previous models predicted that consumers would hedge their
+domestic investments with international investments, but this correlation is measured to not be nearly as strong as
+predicted.
+
 \subsection{Robustness}
-Similar motivation to rational inattention.
+Robustness exists in a similar space as rational inattention. The basic idea is that instead of
+composing an information capacity constraint, instead a parameter of uncertainty or distrust of
+the model of the environment.
 
-Again discuss results and newer papers.
-\subsection{Credit Risk Modeling}
-Info theory used to develop AIC - used in all sorts of model validation.
+To simplify the setup (skipping significant background in control theory), the problem setup can
+again be viewed similar to above. An agent aims to make a decision $u \epsilon U$ based on some signal $y \epsilon Y$.
+Assuming that the true distribution describing the environment is $Q$, the agent looks to optimize the expected cost of
+their deicison given the constraint $D(Q||P) \le R$. Thus a lower value of $R$ implies a higher level of certainty or
+trust of the model $P$ of the real distribution $Q$.
 
-One paper also uses AIC to look at the predictability of the stock market historically.
+\subsection{Applications of Robustness}
+
+\cite{sargent2015} uses the idea of robustness to model the price and quantity of items in an economy where decision
+makers have fear of model misspecification. They find that ``risk prices'' are highest when the agents are most
+unsure of hidden state variables in the model.
+
+In \cite{robustPortfolio}, the Sargent and Hansen's ideas of distrust of model parameters (desire for robustness)
+are used to develop optimal investment portfolios. Further analysis suggests that portfolios chosen based
+on the foundations of robustness to model uncertainty are more stable over time.
+
+For a simpler (non-robust) introduction to portfolio theory and optimal portfolios, see the discussion of Cover's
+work below.
+
+\subsection{Akaike Information Criterion}
+In a highly influential paper \cite{Akaike1998}, a metric for comparing statistical models (performing model fitting)
+is given that is defined using KL-divergence. The AIC metric is stated as
+\begin{gather*}
+  E_{p(X, \hat{\theta})}\left[\log\left(f(X|\hat{\theta}\right)\right]
+\end{gather*}
+which is shown to be equivalent to maximization of
+\begin{gather*}
+  E\left[\log\left(\frac{f(X|\hat{\theta})}{f(X|\theta)}\right)\right]
+\end{gather*}
+which we can recognize as the KL-Divergence $D(f(X|\theta) || f(X|\hat{\theta}))$. Here $\hat{\theta}$ is
+an estimate of a random variable of interest $\theta$, and $X$ is a random variable distributed according to 
+$f(x|\theta)$. It is important to note that (as the paper's title says)this is not just the maximum
+likelihood principle, since the AIC depend on the true value of the variable of interest, $\theta_{0}$,
+whereas the maximum likelihood would seek the function $\hat{\theta(Z)}$ which maximizes $f(z|\theta)$,
+which does not depend on $\theta_{0}$.
+
+As the AIC can be written using KL-Divergence, it is not surprising that in terms of comparing statistical model
+fit, AIC is a relative measure. That is, if all of the models of interest are bad, or all of them are good, not
+much insight can be gained through use of AIC. It follows that many applications use AIC against known good models
+to provide useful insight.
+
+Statistical model fitting has a huge array of applications, but for the purpose of this survey it is worth noting that
+AIC could be used to, for example, perform model fitting for credit risk of a given consumer.
+
+As another example, \cite{Pesaran1995} uses AIC (among other methods) to quantify the predictability
+of US stock market returns for a range of years.
+
 \section{Information Theory in Investment}
 Some of the results below deal with the value or influence of information on invenstment in a
 somewhat less information-theoretic centered approach (though in the abstract they still present
@@ -131,11 +211,11 @@ additional result from optimal portfolios above
 
 %I can reference files in the {\tt refs.bib}.
 
-running refs list: \cite{RePEc:eee:monchp:3-04}, \cite{Burnham2011}, \cite{Cover2005}, \cite{Cover1988},
+% running refs list: \cite{RePEc:eee:monchp:3-04}, \cite{Cover2005}, \cite{Cover1988},
 
-\cite{Cover1998}, \cite{Li2017}, \cite{Sims2003}, \cite{Woodford2009}, \cite{Hansen2010}, \cite{StochasticGames},
+% \cite{Cover1998}, \cite{Li2017}, \cite{Sims2003}, \cite{Woodford2009}, \cite{Hansen2010}, \cite{StochasticGames},
 
-\cite{Pesaran1995}
+% \cite{Pesaran1995}
 
 
  
