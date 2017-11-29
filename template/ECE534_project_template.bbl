@@ -26,6 +26,11 @@ H.~Akaike, \emph{Information Theory and an Extension of the Maximum Likelihood
   \url{https://doi.org/10.1007/978-1-4612-1694-0_15}
 \BIBentrySTDinterwordspacing
 
+\bibitem{cover1988}
+A.~R. Barron and T.~M. Cover, ``A bound on the financial value of
+  information,'' \emph{IEEE Transactions on Information Theory}, vol.~34,
+  no.~5, pp. 1097--1100, Sep 1988.
+
 \bibitem{sargent2015}
 \BIBentryALTinterwordspacing
 M.~Cagetti, L.~P. Hansen, T.~Sargent, and N.~Williams, ``Robustness and pricing
@@ -49,6 +54,19 @@ L.~Garlappi, R.~Uppal, and T.~Wang, ``Portfolio selection with parameter and
   http://dx.doi.org/10.1093/rfs/hhl003}
 \BIBentrySTDinterwordspacing
 
+\bibitem{robustness}
+L.~P. Hansen and T.~J. Sargent., \emph{Robustness}.\hskip 1em plus 0.5em minus
+  0.4em\relax Princeton, N.J.: Princeton University Press, 2008.
+
+\bibitem{Hansen2010}
+\BIBentryALTinterwordspacing
+L.~P. Hansen and T.~J. Sargent, ``Chapter 20 - wanting robustness in
+  macroeconomics,'' ser. Handbook of Monetary Economics, B.~M. Friedman and
+  M.~Woodford, Eds.\hskip 1em plus 0.5em minus 0.4em\relax Elsevier, 2010,
+  vol.~3, no. Supplement C, pp. 1097 -- 1157. [Online]. Available:
+  \url{http://www.sciencedirect.com/science/article/pii/B9780444534545000086}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Li2017}
 \BIBentryALTinterwordspacing
 W.~Li, Y.~Luo, and J.~Nie, ``{Elastic attention, risk sharing, and
@@ -57,11 +75,24 @@ W.~Li, Y.~Luo, and J.~Nie, ``{Elastic attention, risk sharing, and
   \url{https://ideas.repec.org/a/eee/dyncon/v79y2017icp1-20.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Cover2005}
+C.~Mathis and T.~M. Cover, ``A statistic for measuring the influence of side
+  information in investment,'' in \emph{Proceedings. International Symposium on
+  Information Theory, 2005. ISIT 2005.}, Sept 2005, pp. 1156--1157.
+
 \bibitem{homeBias}
 \BIBentryALTinterwordspacing
 S.~V. Nieuwerburgh and L.~Veldkamp, ``Information immobility and the home bias
   puzzle,'' National Bureau of Economic Research, Working Paper 13366,
   September 2007. [Online]. Available: \url{http://www.nber.org/papers/w13366}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Cover1998}
+\BIBentryALTinterwordspacing
+E.~Ordentlich and T.~M. Cover, ``The cost of achieving the best portfolio in
+  hindsight,'' \emph{Mathematics of Operations Research}, vol.~23, no.~4, pp.
+  960--982, 1998. [Online]. Available:
+  \url{https://doi.org/10.1287/moor.23.4.960}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Pesaran1995}

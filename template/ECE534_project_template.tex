@@ -39,11 +39,27 @@ E-mail: phanse4@uic.edu}
 \maketitle
 
 \begin{abstract}
+  This survey considers the impact of information theory on the fields of
+  economics and investment. The significant importance of the ability to
+  quantify information is highlighted as it relates to decision-making of
+  economic agents. On the other hand, a brief look into major work
+  quantifying the value of information in the context of investment and
+  portfolio strategy is given.
 \end{abstract}
 
 \section{Introduction}
+%Big results in information theory applied to economics and investing. Hopefully a look at open problems.
+Many fundamental problems in the field of economics aim to model the behavior of consumers or agents in
+a market or economy. Intuitively, information available to consumers is not always accurate, nor is it
+always taken into consideration when making choices. Consumers also often experience a difference
+in knowledge and available information when making choices in the same environment.
 
-Big results in information theory applied to economics and investing. Hopefully a look at open problems.
+Some basic quantities in information theory like mutual information and divergence are shown in this survey
+to have significant impact on economic models of behavior, and also explain phenomena (such as price stickiness)
+which contradict traditional behavior models.
+
+In the field of portfolio theory and investment, information theory presents a very attractive and powerful
+means of quantifying information that is used to analyze portfolio behavior/performance.
 
 \section{Information Theory in Economics}
 Many traditional economic models utilize the concept of rational agents to develop various results.
@@ -56,6 +72,13 @@ we observe in economic decision making - limited information processing capacity
 lack of access to a perfect model of the environment.
 
 Sims \cite{Sims2003} \cite{Sims2010} aims to address the first point in his work on rational inattention.
+The name is derived from ``rational'' - the agent aims to make an optimal choice, and ``inattention'' -
+the agent has finite capacity to process information, and thus must choose to ignore some information.
+
+Sargent and Hansen \cite{robustness} \cite{Hansen2010} address the second issue. They develop a framework
+for ``robust'' decision making in the assumption that an agent has an approximate model of the environment,
+rather than the true model.
+
 \subsection{Rational Inattention}
 In \cite{Sims2003}, rational inattention is developed for linear quadratic (LQ) control with multivariate
 state. The full setup for this case is lengthy, so for brevity the simpler optimization problem is given:
@@ -106,13 +129,13 @@ predicted.
 
 \subsection{Robustness}
 Robustness exists in a similar space as rational inattention. The basic idea is that instead of
-imposing an information capacity constraint, instead a parameter of uncertainty or distrust of
-the model of the environment.
+imposing an information capacity constraint, a parameter of uncertainty or distrust of
+the model of the environment is specified.
 
 To simplify the setup (skipping significant background in control theory), the problem setup can
 again be viewed similar to above. An agent aims to make a decision $u \epsilon U$ based on some signal $y \epsilon Y$.
 Assuming that the true distribution describing the environment is $Q$, the agent looks to optimize the expected cost of
-their deicison given the constraint $D(Q||P) \le R$. Thus a lower value of $R$ implies a higher level of certainty or
+their decison given the constraint $D(Q||P) \le R$. Thus a lower value of $R$ implies a higher level of certainty or
 trust of the model $P$ of the real distribution $Q$.
 
 \subsection{Applications of Robustness}
@@ -157,11 +180,57 @@ As another example, \cite{Pesaran1995} uses AIC (among other methods) to quantif
 of US stock market returns for a range of years.
 
 \section{Information Theory in Investment}
-Some of the results below deal with the value or influence of information on invenstment in a
+Some of the results below deal with the value or influence of information on investment in a
 somewhat less information-theoretic centered approach (though in the abstract they still present
 a quantification of information, and so they are worth considering/contrasting with the other
 results).
+
+For all sections below, the following definitions are useful:
+Consider a stock market vector given by
+\begin{gather*}
+  \boldsymbol{x} = (x_{1}, x_{2}, ..., x_{m})^{t}
+\end{gather*}
+where $x_{i}$ is the price relative of a given stock - the ratio of its closing to opening price - for a given day.
+
+A portfolio is defined as
+\begin{gather*}
+  \boldsymbol{b} = (b_{1}, b_{2}, ..., b_{m})^{t}, b_{i} \ge 0, \Sigma b_{i} = 1.
+\end{gather*}
+where each $b_{i}$ represents the proportion of current wealth invested in stock $i$.
+Finally, the factor by which wealth increases
+in a given investment period, $S$, can then be defined as $ S = \Sigma b_{i}x_{i} $
+A straightforward comparison can be made between any two investment strategies by comparing $S$ for various scenarios.
+
 \subsection{Value of Information}
+In \cite{universal}, a strategy is shown that achieves $S_{n}$ ($S$ over a sequence of n stock vectors) equal to,
+in the first order of the exponent, the best constant rebalanced portfolio $S^{*}_{n}$. The notion of the optimal
+portfolio is used in \cite{cover1988}, where this portfolio's wealth-increase-factor $S^{*}_{n}$ is rewritten as
+\begin{gather*}
+  \left(S^{*}_{n}\right)^{\frac{1}{n}} \rightarrow 2^{W}
+\end{gather*}
+where W is defined as the ``doubling rate'' for a stock market vector $\boldsymbol{X}$:
+\begin{gather*}
+  W(\boldsymbol{X}) = \max_{\boldsymbol{b} \epsilon B}\int{log \boldsymbol{b}^{t}\boldsymbol{x} dF(\boldsymbol{x})}
+\end{gather*}
+
+Similarly, the wealth factor $W$ given some side information $Y$ is defined
+\begin{gather*}
+  W(\boldsymbol{X} | Y) =
+  \max_{\boldsymbol{b}(y)}\int\int{log \boldsymbol{b}^{t}(y)\boldsymbol{x} dF(\boldsymbol{x}, y)}
+\end{gather*}
+
+Next, the item of interest, $\Delta$ is defined intuitively as the difference
+between the maximum expected log wealth knowing $Y$ and not knowing $Y$:
+\begin{gather*}
+  \Delta = W(\boldsymbol{X} | Y) - W(\boldsymbol{X})
+\end{gather*}
+
+In \cite{Cover2005} a simple ratio of the wealth-increase-factor of an optimal portfolio with and without
+side information is presented. This statistic is shown to converge to the definition of $\Delta$ above.
+It is shown that this difference $\Delta$ is bounded by the mutual information $I(\boldsymbol{X};Y)$. Though this
+result may appear intuitive or simple, it is important to note that the problem setup is highly general and
+that $Y$ can be any information. It is also shown that this bound is tight, and so the result is overall
+very powerful.
 
 \subsection{Value of Information in Biology}
 The results above are extended and used to model a population as a financial portfolio in \cite{Rivoire2011}.
@@ -174,31 +243,44 @@ must process information at an individual level. This leads to the result that
 \end{gather*}
 i.e. in general the information gathered by any member of a population is less than the collective information
 gathered by the entire population. Note that $X'_{t}$ here refers to a component of the environment defined at the population level.
-\subsection{Universal Portfolios}
-Consider a stock market vector given by
-\begin{gather*}
-  \boldsymbol{x} = (x_{1}, x_{2}, ..., x_{m})^{t}
-\end{gather*}
-where $x_{i}$ is the price relative of a given stock - the ratio of its closing to opening price - for a given day.
 
-A portfolio is defined as
-\begin{gather*}
-  \boldsymbol{b} = (b_{1}, b_{2}, ..., b_{m})^{t}, b_{i} \ge 0, \Sigma b_{i} = 1.
-\end{gather*}
-where each $b_{i}$ represents the proportion of current wealth invested in stock $i$.
-
-Finally, the factor by which wealth increases
-in a given investment period, $S$, can then be defined as $ S = \Sigma b_{i}x_{i} $
-A straightforward comparison can be made between any two investment strategies by comparing $S$ for various scenarios.
-
-In \cite{universal}, a strategy is shown that achieves $S_{n}$ ($S$ over a sequence of n stock vectors) equal to,%
-in the first order of the exponent, the best constant rebalanced portfolio $S^{*}_{n}$. 
-
-
-
-\subsection{Influence of Side Information in Investment}
-additional result from optimal portfolios above
 \subsection{Cost of Achieving the Best Portfolio in Hindsight}
+Cover \cite{Cover1998} also gives worst case analysis of how closely an investor can track the best possible
+portfolio $S_{n}^{*}(\boldsymbol{x}^{n})$ and shows that:
+\begin{gather*}
+  \max_{\boldsymbol{b}}\min_{\boldsymbol{x}^{n}}
+  \frac{\hat{S}_{n}^{*}(\boldsymbol{x}^{n})}{S_{n}^{*}(\boldsymbol{x}^{n})}
+  = V_{n}
+\end{gather*}
+
+where $V_{n}$ is a function of entropy of the observation windows over a length of time $n$.
+
+\section{Open Problems}
+
+\subsection{Unified Models of Bias}
+As discussed in the section on rational inattention and robustness, it is clear that
+information theory has already made significant impact on the state of the art in
+formalizing models observed human behavior. One of the major open problems in
+behavioral economics is to develop a unified model encompassing different forms
+of human behavior such as cognitive biases (risk aversion, loss aversion,
+confirmation bias, etc).
+
+Information theory has proven to be invaluable in modeling two major components of
+economic behavior (limited information capacity, lack of access to a perfect model).
+It is feasible that it could play a significant role in developing more nuanced and
+robust models of non-ideal economic agents.
+\subsection{Home Bias Puzzle}
+The home bias problem/puzzle (in trade) as addressed by \cite{homeBias} remains an open problem, and
+the work described in this survey used information theoretic constraints
+(along with some assumptions about learning and information transfer) to attempt
+to explain the home bias observation. It seems plausible that an information
+theoretic framework for understanding this problem could emerge given the current
+research on the problem.
+\subsection{Dividend Puzzle}
+The dividend puzzle is based on the observation that companies rewarding dividends
+typically attract investors with higher valuation. Some newer explanations of this
+problem suggest that information asymmetry could be an explanation, and so
+ideas from \cite{homeBias} could potentially be relevant for this issue.
 
 
 %You can include figures such as \ref{fig:owl}  in .eps, .jpg, .pdf format like this:
